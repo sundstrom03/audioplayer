@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Player</title>
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/798522302a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom JavaScript -->
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- Main player area -->
+    <div id="player-area" class="player-area">
+      <!-- Volume control -->
+      <div class="volume-container">
+        <div class="volume-down"><i class="fa-solid fa-volume-low"></i></div>
+        <input type="range" id="volume-control" min="0" max="100" value="100" />
+        <div class="volume-up"><i class="fa-solid fa-volume-high"></i></div>
+      </div>
+      <!-- Mute button -->
+      <div id="mute-button" class="material-icons">
+        <i class="fa-solid fa-volume-high"></i>
+      </div>
+      <!-- Album cover image -->
+      <div class="img-container">
+        <img src="img/bild1.jpg" alt="music-cover" id="cover" />
+      </div>
+      <!-- Track information -->
+      <div class="track-title">
+        <h3 id="name">Cornfield Chase</h3>
+        <p id="artist">Hans Zimmer</p>
+      </div>
+      <!-- Progress bar and time display -->
+      <div class="content-row">
+        <input
+          type="range"
+          class="width-100"
+          id="progress-bar"
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+        />
+        <div class="time-row">
+          <span id="timer-now">0:00</span>
+          <span id="timer-total">0:00</span>
+        </div>
+      </div>
+      <!-- Main playback controls -->
+      <div class="navigation">
+        <div id="shuffleBtn" class="material-icons shuffle">
+          <i class="fa-solid fa-shuffle"></i>
+        </div>
+        <div id="previousTrack" class="material-icons">
+          <i class="fa-solid fa-backward"></i>
+        </div>
+        <div id="playPause" class="material-icons">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <div id="nextTrack" class="material-icons">
+          <i class="fa-solid fa-forward"></i>
+        </div>
+        <div id="repeatBtn" class="material-icons">
+          <i class="fa-solid fa-repeat"></i>
+        </div>
+      </div>
+      <!-- Secondary playback controls -->
+      <div class="navigation2">
+        <div id="stopBtn" class="material-icons">
+          <i class="fa-solid fa-stop"></i>
+        </div>
+        <div id="playlistBtn" class="material-icons">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <!-- Audio element -->
+      <audio src="audio/Cornfield Chase.mp3" id="audio"></audio>
+    </div>
+    <!-- Playlist area -->
+    <div id="playlist-area" class="playlist">
+      <!-- Return button -->
+      <div class="return">
+        <i id="returnBtn" class="fa-solid fa-chevron-down"></i>
+      </div>
+      <!-- Track list -->
+      <div id="trackList" class="tracklist">
+        <div>
+          <h3 class="trackName">Cornfield Chase</h3>
+          <span class="artistName">Hans Zimmer</span>
+          <span class="trackLength">2:07</span>
+        </div>
+      </div>
+      <!-- Playlist progress bar -->
+      <div class="content-row">
+        <input
+          type="range"
+          class="width-100"
+          id="playlist-progress-bar"
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+        />
+      </div>
+      <!-- Playlist playback controls -->
+      <div class="navigation3">
+        <div id="playlist-previousTrack" class="material-icons">
+          <i class="fa-solid fa-backward"></i>
+        </div>
+        <div id="playlist-playPause" class="material-icons">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <div id="playlist-nextTrack" class="material-icons">
+          <i class="fa-solid fa-forward"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
